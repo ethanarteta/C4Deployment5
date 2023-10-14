@@ -4,9 +4,12 @@
 This documentation provides an overview of deploying a Banking Application using Terraform. The goal is to create a Terraform file with specific components and set up Jenkins for continuous integration, enabling the deployment of an application across multiple EC2 instances.
 
 ## Issues
-After Step 5 I experienced issues with permissions when deploying the application on Jenkins. "/var/lib/jenkins/workspace/Deployment_5_main@tmp/durable-e3767fa8/script.sh: line 3: /home/ubuntu/setup.sh: Permission denied" 
-To resolve this error code, I had to add permissions to execute the script as I ssh into the second instance. "ssh ubuntu@3.90.115.246 'chmod +x /home/ubuntu/setup.sh && /home/ubuntu/setup.sh'"
-
+After Step 5 I experienced issues with permissions when deploying the application on Jenkins. 
+"/var/lib/jenkins/workspace/Deployment_5_main@tmp/durable-e3767fa8/script.sh: line 3: /home/ubuntu/setup.sh: Permission denied" 
+To resolve this error code, I had to add permissions to execute the script as I ssh into the second instance. 
+```bash 
+"ssh ubuntu@3.90.115.246 'chmod +x /home/ubuntu/setup.sh && /home/ubuntu/setup.sh'"
+```
 ## Steps
 
 ### Step 1: Terraform Creation
