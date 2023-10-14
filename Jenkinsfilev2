@@ -1,0 +1,19 @@
+pipeline {
+  agent any
+   stages {
+    stage ('Clean') {
+      steps {
+        sh '''#!/bin/bash
+        echo "command to run the pkill.sh"
+        '''
+     }
+   }
+ stage ('Deploy') {
+  steps {
+     sh '''#!/bin/bash
+     echo "command to run the setup2.sh"
+    '''
+      }
+    }
+  }
+}
