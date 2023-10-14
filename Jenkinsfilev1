@@ -30,7 +30,8 @@ steps {
 sh '''#!/bin/bash
 scp -p /var/lib/jenkins/workspace/Deployment_5_main/setup.sh ubuntu@3.90.115.246:/home/ubuntu/
 
-ssh ubuntu@3.90.115.246 'bash -s' </home/ubuntu/setup.sh
+ssh ubuntu@3.90.115.246 'chmod +x /home/ubuntu/setup.sh && /home/ubuntu/setup.sh'
+
 
 '''
 }
