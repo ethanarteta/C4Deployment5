@@ -1,4 +1,4 @@
-# Terraform VPC Deployment Documentation
+# Terraform Deployment Documentation
 
 ## Purpose
 This documentation provides an overview of deploying a Banking Application using Terraform. The goal is to create a Terraform file with specific components and set up Jenkins for continuous integration, enabling the deployment of an application across multiple EC2 instances.
@@ -93,7 +93,7 @@ stage('Clean') {
 - I believe that the Jenkins server should be on a private subnet for added security. It would not be recommended for the public to find access to those tools.
 
 ### System Diagram
-
+![image](Deployment5/Deployment5.png)
 
 ### Optimization
 To make this deployment more efficient, I would implement the following:
@@ -104,3 +104,7 @@ To make this deployment more efficient, I would implement the following:
 
 3. **Containerization:** Consider containerizing your application using Docker and deploy it on an orchestration platform like Kubernetes for more efficient management and scalability.
 
+![image](Deployment5/BankingApplication.png)
+
+
+![image](Deployment5/Jenkins.png)
