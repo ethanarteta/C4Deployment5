@@ -28,13 +28,8 @@ junit 'test-reports/results.xml'
 stage ('Deploy') {
 steps {
 sh '''#!/bin/bash
-ssh ubuntu@3.90.115.246 \\
-wget https://github.com/ethanarteta/C4Deployment5 //
-cd c4_deployment-5/ //
-chmod 700 setup2.sh //
-chmod 700 setup.sh //
-. setup.sh
- 'bash -s' </home/ubuntu/setup.sh
+scp  /var/lib/jenkins/workspace/Deployment_5_main/setup.sh ubuntu@3.90.115.246:/home/ubuntu
+ssh ubuntu@3.90.115.246 'bash -s' </home/ubuntu/setup.sh
 '''
 }
 }
