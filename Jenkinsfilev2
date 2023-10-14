@@ -4,8 +4,9 @@ pipeline {
     stage ('Clean') {
       steps {
         sh '''#!/bin/bash
-        scp  /var/lib/jenkins/workspace/Deployment_5_main/pkill.sh ubuntu@3.90.115.246:/home/ubuntu
-        ssh ubuntu@3.90.115.246 'bash -s' </home/ubuntu/pkill.sh
+        scp -p /var/lib/jenkins/workspace/Deployment_5_main/pkill.sh ubuntu@3.90.115.246:/home/ubuntu/
+
+        ssh ubuntu@3.90.115.246 'chmod +x /home/ubuntu/pkill.sh && /home/ubuntu/pkill.sh'
         '''
      }
    }
