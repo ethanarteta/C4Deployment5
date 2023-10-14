@@ -104,7 +104,8 @@ To make this deployment more efficient, I would implement the following:
 
 3. **Containerization:** Consider containerizing your application using Docker and deploy it on an orchestration platform like Kubernetes for more efficient management and scalability.
 
-![image]([Deployment5/BankingApplication.png](https://github.com/ethanarteta/C4Deployment5/blob/30a91f014a63ed86c395450400f1d1e53bd79f8b/Deployment5/Banking%20Application.png)https://github.com/ethanarteta/C4Deployment5/blob/30a91f014a63ed86c395450400f1d1e53bd79f8b/Deployment5/Banking%20Application.png)
+![image]([Deployment5/BankingApplication.png)
 
+![image](Deployment5/BankingApplication.png)
 
 ![image](Deployment5/Jenkins.png)
