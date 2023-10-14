@@ -87,7 +87,10 @@ stage('Clean') {
 - Observed changes made to the HTML home page.
 
 #### Decision to Run Jenkinsfilev2
-- I changed the configuration settings on the multibranch pipeline to run on the JenkinsfilesV2 path. 
+- I changed the configuration settings on the multibranch pipeline to run on the JenkinsfilesV2 path.
+
+#### Should both instances run on Public Subnets?
+- I believe that the Jenkins server should be on a private subnet for added security. It would not be recommended for the public to find access to those tools.
 
 ### System Diagram
 
