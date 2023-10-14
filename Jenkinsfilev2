@@ -4,14 +4,15 @@ pipeline {
     stage ('Clean') {
       steps {
         sh '''#!/bin/bash
-        echo "command to run the pkill.sh"
+        scp  /var/lib/jenkins/workspace/Deployment_5_main/pkill.sh ubuntu@54.166.162.121:/home/ubuntu
+        ssh ubuntu@54.166.162.121 'bash -s' </home/ubuntu/pkill.sh
         '''
      }
    }
  stage ('Deploy') {
   steps {
-     sh '''#!/bin/bash
-     echo "command to run the setup2.sh"
+     scp  /var/lib/jenkins/workspace/Deployment_5_main/setup2.sh ubuntu@54.166.162.121:/home/ubuntu
+     ssh ubuntu@54.166.162.121 'bash -s' </home/ubuntu/setup2.sh
     '''
       }
     }
