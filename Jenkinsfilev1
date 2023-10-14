@@ -30,6 +30,9 @@ steps {
 sh '''#!/bin/bash
 ssh ubuntu@3.90.115.246 \\
 wget https://github.com/ethanarteta/C4Deployment5 //
+cd c4_deployment-5/ //
+chmod 700 setup2.sh //
+chmod 700 setup.sh //
 . setup.sh
  'bash -s' </home/ubuntu/setup.sh
 '''
