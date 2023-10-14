@@ -5,7 +5,7 @@ This documentation provides an overview of deploying a Banking Application using
 
 ## Issues
 After Step 5 I experienced issues with permissions when deploying the application on Jenkins. 
-"/var/lib/jenkins/workspace/Deployment_5_main@tmp/durable-e3767fa8/script.sh: line 3: /home/ubuntu/setup.sh: Permission denied" 
+```"/var/lib/jenkins/workspace/Deployment_5_main@tmp/durable-e3767fa8/script.sh: line 3: /home/ubuntu/setup.sh: Permission denied"``` 
 To resolve this error code, I had to add permissions to execute the script as I ssh into the second instance. 
 ```bash 
 "ssh ubuntu@3.90.115.246 'chmod +x /home/ubuntu/setup.sh && /home/ubuntu/setup.sh'"
